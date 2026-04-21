@@ -128,8 +128,11 @@ const Events: React.FC = () => {
 
       {/* =========================================
           2. EXISTING EVENTS MAPPING
-      ========================================= */}
+          ========================================= */}
       {events.map((event) => {
+        const isGopioEvent = event.title.includes(
+          "YOUTH CONFERENCE - GOPIO International 2026",
+        );
         // Safe cast to include our custom hover/video properties added in siteData
         const extEvent = event as typeof event & {
           hoverImage?: string;
@@ -157,17 +160,17 @@ const Events: React.FC = () => {
             <div
               className={`w-full max-w-[500px] lg:max-w-[660px] ${
                 extEvent.enableHover
-                  ? "relative cursor-pointer transform transition-transform duration-500 hover:scale-[1.02] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-[#C8A04B]/20 overflow-hidden"
-                  : "rounded-xl shadow-[0_15px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 bg-white p-2"
+                  ? "relative cursor-pointer transform transition-transform duration-500 hover:scale-[1.02] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] overflow-hidden"
+                  : isGopioEvent
+                    ? "rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-[#C8A04B]/30 bg-white p-2"
+                    : "rounded-xl"
               }`}
             >
               <img
                 src={event.image}
                 alt={event.imageAlt}
                 className={`w-full object-contain ${
-                  isLogo
-                    ? "max-w-[280px] md:max-w-[350px] mx-auto"
-                    : "rounded-md"
+                  isLogo ? "max-w-[280px] md:max-w-[350px] mx-auto" : ""
                 } ${
                   extEvent.enableHover
                     ? "transition-opacity duration-700 ease-in-out hover:opacity-0"

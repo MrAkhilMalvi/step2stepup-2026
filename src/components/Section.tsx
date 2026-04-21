@@ -39,7 +39,7 @@ const Section: React.FC<Props> = ({ section }) => {
     >
       {/* Background plate */}
       <div
-        className={`absolute w-[85%] h-[85%] bg-[#c7dbe6] z-0 rounded-xl
+        className={`absolute w-[85%] h-[85%] bg-[#c7dbe6] z-0
         ${
           right
             ? "md:-bottom-6 md:-right-6 -bottom-3 -right-3"
@@ -52,7 +52,7 @@ const Section: React.FC<Props> = ({ section }) => {
         ref={imgRef}
         src={image}
         alt={heading}
-className="relative z-10 w-full md:max-w-[600px] lg:max-w-[700px] object-cover rounded-xl shadow-lg transition-all duration-300"      />
+className="relative z-10 w-full md:max-w-[600px] lg:max-w-[700px] transition-all duration-300"      />
     </div>
   );
 

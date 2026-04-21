@@ -26,7 +26,3 @@ yarn-error.log*
 public/pdfs/*.pdf
 
 step2stepup-control.txt
-
-
-
-git rm --cached public/pdfs/AI-Future.pdf
