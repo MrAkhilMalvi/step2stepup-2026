@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* Elementor-style button */
+.btn-primary {
+  @apply inline-flex items-center gap-2 bg-[#61ce70] text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 transition-all duration-200 hover:opacity-90 hover:scale-105;
+}
+
+/* Fade-in animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeInLeft  { animation: fadeInLeft  0.8s ease both; }
+.animate-fadeInRight { animation: fadeInRight 0.8s ease both; }
+.animate-fadeInUp    { animation: fadeInUp    0.6s ease both; }
