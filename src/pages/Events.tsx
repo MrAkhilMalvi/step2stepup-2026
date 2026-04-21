@@ -67,7 +67,7 @@ const Events: React.FC = () => {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4 mt-4 w-full">
                 <a
-                  href="/donate"
+                  href="https://givebutter.com/awards-night-2026-bsfcxz"
                   className="bg-[#C8A04B] text-white font-bold text-[14px] md:text-lg px-5 md:px-6 py-3 md:py-4 rounded-xl shadow-[0_10px_20px_rgba(200,160,75,0.3)] hover:bg-[#08173E] hover:text-white hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 md:gap-3 w-fit"
                 >
                   Book Your Seats Now
@@ -297,55 +297,11 @@ const Events: React.FC = () => {
 
             <div className="w-full h-full rounded-2xl shadow-2xl overflow-hidden bg-white border-2 border-white/10 relative z-40">
               <iframe
-                key={currentPage}
-                src={`/pdfs/Flyer-awards-2026.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH&page=${currentPage}`}
+                src="https://drive.google.com/file/d/1SISyUoAwBndgRt7YhB3C4PwurWUAswds/preview"
                 title="Awards Night 2026 Brochure"
                 className="w-full h-full border-none"
+                allow="autoplay"
               />
-            </div>
-
-            <button
-              onClick={prevPage}
-              className="absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 p-3 md:p-5 bg-white/20 hover:bg-[#C8A04B] border border-white/20 text-white rounded-full transition-all duration-500 opacity-100 md:opacity-0 md:group-hover:opacity-100 shadow-lg backdrop-blur-sm z-50 transform hover:scale-110"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={3}
-                stroke="currentColor"
-                className="w-5 h-5 md:w-8 md:h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 19.5L8.25 12l7.5-7.5"
-                />
-              </svg>
-            </button>
-
-            <button
-              onClick={nextPage}
-              className="absolute right-2 md:-right-16 top-1/2 -translate-y-1/2 p-3 md:p-5 bg-white/20 hover:bg-[#C8A04B] border border-white/20 text-white rounded-full transition-all duration-500 opacity-100 md:opacity-0 md:group-hover:opacity-100 shadow-lg backdrop-blur-sm z-50 transform hover:scale-110"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={3}
-                stroke="currentColor"
-                className="w-5 h-5 md:w-8 md:h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-            </button>
-
-            <div className="absolute -bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 px-6 py-2 text-white/90 font-bold tracking-widest text-xs md:text-sm transition-opacity duration-500 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-50">
-              PAGE {currentPage} OF {totalPages}
             </div>
           </div>
         </div>
