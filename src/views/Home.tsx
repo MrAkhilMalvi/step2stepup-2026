@@ -24,7 +24,7 @@ const Home: React.FC = () => (
         </h3>
 
         {/* Main Heading */}
-        <h2 className="text-white font-['Roboto_Slab'] uppercase font-semibold leading-relaxed text-[18px] md:text-[26px] mb-6 md:mb-8 tracking-wide">
+        <h2 className="text-white font-slab uppercase font-semibold leading-relaxed text-[18px] md:text-[26px] mb-6 md:mb-8 tracking-wide">
           {SECTIONS[0].title}
         </h2>
 

@@ -1,7 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import { NAV_LINKS, IMAGES, FOOTER } from "../constants/siteData";
 import { FacebookIcon, TwitterIcon, YoutubeIcon } from "./icons/Icons";
-import { Link } from "react-router-dom";
 
 const icons = [FacebookIcon, TwitterIcon, YoutubeIcon];
 
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
-                  to={link.href}
+                  href={link.href}
                   className="inline-block rounded-sm px-2 py-1 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#49B4DE] hover:text-black"
                 >
                   {link.label}

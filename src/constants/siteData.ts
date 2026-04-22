@@ -222,21 +222,21 @@ export const goalParagraphs = [
 
 export const galleryImages = [
   {
-    src: "images/leadership/Priyanka-Chopra-300x200.webp",
+    src: "/images/leadership/Priyanka-Chopra-300x200.webp",
     alt: "Priyanka Chopra",
   },
   {
-    src: "images/leadership/Priyanka-Chopra-2-300x182.webp",
+    src: "/images/leadership/Priyanka-Chopra-2-300x182.webp",
     alt: "Priyanka Chopra 2",
   },
-  { src: "images/leadership/S2SU-009-300x132.webp", alt: "S2SU 009" },
-  { src: "images/leadership/S2SU-007-300x202.webp", alt: "S2SU 007" },
-  { src: "images/leadership/S2SU-006-300x164.webp", alt: "S2SU 006" },
-  { src: "images/leadership/S2SU-005-300x169.webp", alt: "S2SU 005" },
-  { src: "images/leadership/S2SU-004-300x185.webp", alt: "S2SU 004" },
-  { src: "images/leadership/S2SU-003-300x200.webp", alt: "S2SU 003" },
-  { src: "images/leadership/S2SU-002-300x176.webp", alt: "S2SU 002" },
-  { src: "images/leadership/S2SU-001-300x176.webp", alt: "S2SU 001" },
+  { src: "/images/leadership/S2SU-009-300x132.webp", alt: "S2SU 009" },
+  { src: "/images/leadership/S2SU-007-300x202.webp", alt: "S2SU 007" },
+  { src: "/images/leadership/S2SU-006-300x164.webp", alt: "S2SU 006" },
+  { src: "/images/leadership/S2SU-005-300x169.webp", alt: "S2SU 005" },
+  { src: "/images/leadership/S2SU-004-300x185.webp", alt: "S2SU 004" },
+  { src: "/images/leadership/S2SU-003-300x200.webp", alt: "S2SU 003" },
+  { src: "/images/leadership/S2SU-002-300x176.webp", alt: "S2SU 002" },
+  { src: "/images/leadership/S2SU-001-300x176.webp", alt: "S2SU 001" },
 ];
 
 export const paymentMethods = [
@@ -321,7 +321,7 @@ export const events: EventSection[] = [
       "Join us at the Investor Conclave'24 in India to witness the magic of the transformative platform that connects, inspires, and elevates entrepreneurs across the globe.",
       "Date & Venue: 13th - 17th December 2024, Mumbai",
     ],
-    image: "images/events/powerful-logo-PNG.webp",
+    image: "/images/events/powerful-logo-PNG.webp",
     imageAlt: "Powerful Group logo",
     imageLeft: true,
     actions: [
@@ -341,7 +341,7 @@ export const events: EventSection[] = [
       "We are witnessing an exciting time in India, with immense growth potential across various industries. In the next 13 months, India is expected to become a $5 trillion economy, and there is no doubt that it possesses the potential to become a $10 trillion economy by 2030.",
       "The Indian diaspora, spread across the globe, holds tremendous power and influence. They have the ability to leverage this growth potential in India and contribute significantly to its development.",
     ],
-    image: "images/events/GOPIO-logo.webp",
+    image: "/images/events/GOPIO-logo.webp",
     imageAlt: "GOPIO logo",
     imageLeft: false,
     tinted: "gold",
@@ -360,7 +360,7 @@ export const events: EventSection[] = [
       "This event covered the opening of a tribute, a keynote speech by an industry leader, and an interactive panel discussion that highlights leadership, innovation, and strategic planning within the insurance industry.",
       "Additionally, it includes a segment on the future outlook and challenges faced by the industry, followed by closing remarks that summarize the key takeaways. The session aims to provide a comprehensive overview of current trends and future directions.",
     ],
-    image: "images/events/Tribute24IW.webp",
+    image: "/images/events/Tribute24IW.webp",
     imageAlt: "Tribute to 24 Inspirational Women event artwork",
     imageLeft: true,
     actions: [
@@ -385,7 +385,7 @@ export const events: EventSection[] = [
       "The event covers the importance of choosing the right career based on passion, aptitude, and opportunities powered by AI. It emphasizes how AI will shape future job markets, highlighting that 47% of current jobs may not exist in the next decade.",
       "The sessions also introduce Lifology, a platform to help individuals navigate career choices relevant to the evolving AI landscape.",
     ],
-    image: "images/events/Life-Choices-AI.webp",
+    image: "/images/events/Life-Choices-AI.webp",
     imageAlt: "Life choices facing AI event artwork",
     imageLeft: false,
     tinted: "blue",
@@ -405,7 +405,7 @@ export const events: EventSection[] = [
       "This event covered the opening of a tribute, a keynote speech by an industry leader, and an interactive panel discussion that highlights leadership, innovation, and strategic planning within the insurance industry.",
       "Additionally, it includes a segment on the future outlook and challenges faced by the industry, followed by closing remarks that summarize the key takeaways. The session aims to provide a comprehensive overview of current trends and future directions.",
     ],
-    image: "images/events/Tribute24IW.webp",
+    image: "/images/events/Tribute24IW.webp",
     imageAlt: "Tribute to 24 Inspirational Women event artwork",
     imageLeft: true,
     actions: [
@@ -424,7 +424,7 @@ export const events: EventSection[] = [
       "GOPIO Inland Empire has successfully organized several notable events, including fundraising initiatives like a reception dinner for the then Consul General of India, and social events such as India's Independence Day celebrations. The chapter also hosted community engagement activities, including health fairs and cultural programs, to promote Indian heritage and support the local community.",
       "Additionally, educational seminars and discussions on relevant topics were conducted to enhance knowledge and foster connections among members.",
     ],
-    image: "images/events/GOPIO-logo.webp",
+    image: "/images/events/GOPIO-logo.webp",
     imageAlt: "GOPIO logo",
     imageLeft: false,
     tinted: "gold",

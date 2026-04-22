@@ -1,19 +1,22 @@
+"use client";
+
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAV_LINKS, IMAGES } from "../constants/siteData";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
-  const current = location.pathname.replace(/\/$/, "") || "/";
+  const current = pathname.replace(/\/$/, "") || "/";
 
   return (
     <header className="w-full border-b border-black/5 bg-white sticky top-0 z-50">
       <div className="mx-auto flex max-w-[1140px] items-center justify-between px-6 py-3">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <img
             src={IMAGES.logo}
             alt="Step2StepUp logo"
@@ -30,7 +33,7 @@ const Header = () => {
               return (
                 <Link
                   key={link.href}
-                  to={link.href}
+                  href={link.href}
                   className={`px-4 py-3 text-[15px] xl:text-[16px] font-semibold transition-colors duration-200
                     ${
                       isActive
@@ -48,6 +51,8 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         <button
+          type="button"
+          aria-label="Toggle navigation menu"
           className="text-[#0188bf] lg:hidden focus:outline-none"
           onClick={() => setOpen(!open)}
         >
@@ -66,7 +71,7 @@ const Header = () => {
             return (
               <Link
                 key={link.href}
-                to={link.href}
+                href={link.href}
                 onClick={() => setOpen(false)}
                 className={`block border-b border-gray-100 px-4 py-3 text-[15px] font-semibold transition-colors duration-200
                   ${

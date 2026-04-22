@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import { ContentSection } from "../constants/siteData";
 
@@ -61,7 +63,7 @@ className="relative z-10 w-full md:max-w-[600px] lg:max-w-[700px] transition-all
   const TextBlock = () => (
     <div className="flex-1 w-full">
       {/* Heading */}
-      <h2 className="font-['Roboto_Slab'] font-bold text-[22px] sm:text-[26px] md:text-[32px] lg:text-[36px] text-[#1e88b6] leading-snug mb-4">
+      <h2 className="font-slab font-bold text-[22px] sm:text-[26px] md:text-[32px] lg:text-[36px] text-[#1e88b6] leading-snug mb-4">
         {heading}
       </h2>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import CtaBanner from "../components/CtaBanner";
 import { ChevronLeftIcon, ChevronRightIcon } from "../components/icons/Icons";
@@ -40,7 +42,7 @@ const Founder = () => {
       ========================================= */}
       <section className="bg-[#08173E] py-[30px]">
         <div className="mx-auto max-w-[1140px] px-6">
-          <h1 className="text-center font-['Roboto'] text-[clamp(2rem,4vw,3rem)] font-semibold text-white">
+          <h1 className="text-center font-sans text-[clamp(2rem,4vw,3rem)] font-semibold text-white">
             Our Leadership
           </h1>
         </div>
@@ -61,7 +63,7 @@ const Founder = () => {
           {/* Text Right - Full Bio */}
           <div className="w-full md:w-7/12 lg:w-2/3 flex flex-col justify-center space-y-6">
             <div>
-              <h2 className="font-['Roboto'] text-[clamp(1.5rem,2.5vw,2.5rem)] font-semibold text-[#C8A04B]">
+              <h2 className="font-sans text-[clamp(1.5rem,2.5vw,2.5rem)] font-semibold text-[#C8A04B]">
                 {founderProfile.name}
               </h2>
               <div className="mt-2 space-y-1 text-[1.1rem] font-bold text-[#1f2937]">
@@ -89,7 +91,7 @@ const Founder = () => {
             {/* Text Left - Full Bio */}
             <div className="w-full md:w-7/12 lg:w-2/3 flex flex-col justify-center space-y-6 order-2 md:order-1">
               <div>
-                <h2 className="font-['Roboto'] text-[clamp(1.5rem,2.5vw,2.5rem)] font-semibold text-[#C8A04B]">
+                <h2 className="font-sans text-[clamp(1.5rem,2.5vw,2.5rem)] font-semibold text-[#C8A04B]">
                   {cofounderProfile.name}
                 </h2>
                 <div className="mt-2 space-y-1 text-[1.1rem] font-bold text-[#1f2937]">
@@ -124,7 +126,7 @@ const Founder = () => {
       ========================================= */}
       <section id="gallery" className="mx-auto max-w-[1140px] scroll-mt-24 px-6 py-16">
         <div className="space-y-8">
-          <h2 className="text-center font-['Roboto'] text-[clamp(2rem,4vw,3rem)] font-semibold text-[#08173E]">
+          <h2 className="text-center font-sans text-[clamp(2rem,4vw,3rem)] font-semibold text-[#08173E]">
             PAST EVENTS BY STEP2STEPUP
           </h2>
 
@@ -200,7 +202,7 @@ const Founder = () => {
       <section className="bg-[#FFE1A1] py-16">
         <div className="mx-auto max-w-[1140px] px-6">
           <div className="space-y-6 text-center max-w-4xl mx-auto">
-            <h2 className="font-['Roboto'] text-[clamp(2rem,4vw,3rem)] font-bold text-[#08173E]">
+            <h2 className="font-sans text-[clamp(2rem,4vw,3rem)] font-bold text-[#08173E]">
               The Goal
             </h2>
             <div className="space-y-5 text-[16px] leading-[1.9] text-gray-800 text-justify md:text-justify">

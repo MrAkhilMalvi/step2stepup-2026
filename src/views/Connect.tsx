@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -61,14 +63,14 @@ const Connect: React.FC = () => {
     <main className="bg-white">
       <section className="bg-[#08173E] py-[30px]">
         <div className="mx-auto max-w-[1140px] px-6">
-          <h1 className="text-center font-['Roboto'] text-[clamp(2rem,4vw,3rem)] font-semibold text-white [text-shadow:0_0_10px_rgba(0,0,0,0.88)]">
+          <h1 className="text-center font-sans text-[clamp(2rem,4vw,3rem)] font-semibold text-white [text-shadow:0_0_10px_rgba(0,0,0,0.88)]">
             Connect with us!
           </h1>
         </div>
       </section>
 
       <section className="bg-[#EAFFE7] py-[30px]">
-        <div className="mx-auto max-w-[1140px] px-6 text-center font-['Roboto'] text-[18px] leading-[1.9] text-black">
+        <div className="mx-auto max-w-[1140px] px-6 text-center font-sans text-[18px] leading-[1.9] text-black">
           <h3 className="mb-4 text-[clamp(1.6rem,3vw,2.1rem)] font-semibold">
             KIND NOTE REGARDING DONATIONS &amp; CONTRIBUTIONS
           </h3>
@@ -105,7 +107,7 @@ const Connect: React.FC = () => {
           </div>
 
           <div className="flex flex-col gap-6">
-            <h2 className="font-['Roboto'] text-[clamp(1.9rem,3vw,2.45rem)] font-semibold text-[#0188BF]">
+            <h2 className="font-sans text-[clamp(1.9rem,3vw,2.45rem)] font-semibold text-[#0188BF]">
               FILL YOUR DETAILS BELOW
             </h2>
 
@@ -234,7 +236,7 @@ const Connect: React.FC = () => {
 
       <section className="bg-[#C8A04B] py-[60px]">
         <div className="mx-auto max-w-[1140px] px-6 text-center">
-          <p className="font-['Roboto'] text-[clamp(1.85rem,4vw,2.2rem)] font-bold leading-[1.45] text-white">
+          <p className="font-sans text-[clamp(1.85rem,4vw,2.2rem)] font-bold leading-[1.45] text-white">
             Join us at Step2StepUp Inc. and take the{" "}
             <span className="underline">first step</span> towards a future filled
             with possibilities. Together, we can empower young adults, transform

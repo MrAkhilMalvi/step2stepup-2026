@@ -2,7 +2,7 @@ import React from "react";
 
 const DonorManifesto: React.FC = () => {
   return (
-    <main className="bg-white font-['Roboto'] overflow-hidden pb-20">
+    <main className="bg-white font-sans overflow-hidden pb-20">
       {/* =========================================
           PAGE HEADER (Matched to Reference Theme)
       ========================================= */}

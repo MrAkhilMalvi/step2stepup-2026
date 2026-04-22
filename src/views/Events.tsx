@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import CtaBanner from "../components/CtaBanner";
 import { events, sectionTone } from "../constants/siteData";
@@ -5,27 +7,13 @@ import { ArrowRightIcon } from "../components/icons/Icons";
 import { EventButton } from "../components/ui/EventButton";
 
 const Events: React.FC = () => {
-  // State for the PDF Modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 2;
 
-  // State for the Video Modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
-  // PDF Navigation Logic
-  const nextPage = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCurrentPage((prev) => (prev === totalPages ? 1 : prev + 1));
-  };
-
-  const prevPage = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCurrentPage((prev) => (prev === 1 ? totalPages : prev - 1));
-  };
 
   return (
-    <main className="bg-white font-['Roboto'] overflow-hidden relative">
+    <main className="bg-white font-sans overflow-hidden relative">
       {/* Page Header */}
       <section className="bg-[#08173E] py-[30px] md:py-[40px] relative">
         <div className="mx-auto max-w-[1140px] px-4 md:px-6">
@@ -77,7 +65,6 @@ const Events: React.FC = () => {
                 {/* View Brochure Button (Triggers PDF Modal) */}
                 <button
                   onClick={() => {
-                    setCurrentPage(1);
                     setIsModalOpen(true);
                   }}
                   className="bg-transparent border-2 border-[#C8A04B] text-[#C8A04B] font-bold text-[14px] md:text-lg px-5 md:px-6 py-3 md:py-4 rounded-xl hover:bg-[#C8A04B] hover:text-white hover:shadow-[0_10px_20px_rgba(200,160,75,0.3)] hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 md:gap-3 w-fit"
@@ -105,7 +92,6 @@ const Events: React.FC = () => {
             <div
               className="w-full flex justify-center lg:justify-end group cursor-pointer mt-8 lg:mt-0"
               onClick={() => {
-                setCurrentPage(1);
                 setIsModalOpen(true);
               }}
             >
@@ -133,7 +119,6 @@ const Events: React.FC = () => {
         const isGopioEvent = event.title.includes(
           "YOUTH CONFERENCE - GOPIO International 2026",
         );
-        // Safe cast to include our custom hover/video properties added in siteData
         const extEvent = event as typeof event & {
           hoverImage?: string;
           videoUrl?: string;
@@ -153,10 +138,7 @@ const Events: React.FC = () => {
         }
 
         const imageBlock = (
-          <div
-            className={`w-full flex items-center justify-center ${event.imageLeft ? "lg:justify-start" : "lg:justify-end"}`}
-          >
-            {/* New Responsive Hoverable Image Logic */}
+          <div className={`w-full flex items-center justify-center ${event.imageLeft ? "lg:justify-start" : "lg:justify-end"}`}>
             <div
               className={`w-full max-w-[500px] lg:max-w-[660px] ${
                 extEvent.enableHover
@@ -210,7 +192,6 @@ const Events: React.FC = () => {
                 <EventButton key={action.href} {...action} />
               ))}
 
-              {/* Conditionally Render the YouTube Button if videoUrl exists */}
               {extEvent.videoUrl && (
                 <button
                   onClick={() => setActiveVideo(extEvent.videoUrl!)}
@@ -313,13 +294,13 @@ const Events: React.FC = () => {
       {activeVideo && (
         <div
           className="fixed inset-0 z-[200] flex items-center justify-center bg-[#08173E]/95 backdrop-blur-md p-4 transition-opacity duration-300 ease-out"
-          onClick={() => setActiveVideo(null)} // Clicking outside closes video
+          onClick={() => setActiveVideo(null)} 
         >
           <div
             className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden border border-white/20 flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()} // Prevent close on video click
+            onClick={(e) => e.stopPropagation()} 
           >
-            {/* Close Button For Video */}
+
             <button
               onClick={() => setActiveVideo(null)}
               className="absolute top-2 right-2 md:-top-12 md:right-0 text-white/80 hover:text-red-500 transition-colors duration-300 z-50 p-2 bg-black/60 md:bg-transparent rounded-full"

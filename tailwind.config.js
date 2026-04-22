@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
@@ -8,8 +8,8 @@ module.exports = {
         green: '#61ce70',
       },
       fontFamily: {
-        slab: ["'Roboto Slab'", 'serif'],
-        sans: ["'Roboto'", 'Arial', 'sans-serif'],
+        slab: ['var(--font-roboto-slab)', 'serif'],
+        sans: ['var(--font-roboto)', 'Arial', 'sans-serif'],
       },
     },
   },

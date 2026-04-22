@@ -3,7 +3,7 @@ import { paymentMethods } from "../constants/siteData";
 
 const Donate = () => {
   return (
-    <main className="bg-white font-['Roboto']">
+    <main className="bg-white font-sans">
       
       {/* ================= HERO SECTION ================= */}
       <section className="bg-[#08173E] py-[30px] relative">

@@ -20,11 +20,11 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 px-6 max-w-full mx-auto">
-        <h3 className="text-[#d4af37] font-['Roboto_Slab'] text-lg md:text-2xl font-medium mb-6 tracking-wide">
+        <h3 className="text-[#d4af37] font-slab text-lg md:text-2xl font-medium mb-6 tracking-wide">
           {HERO.subtitle}
         </h3>
 
-        <h1 className="text-white font-['Roboto_Slab'] font-extrabold uppercase leading-tight text-3xl md:text-5xl lg:text-6xl tracking-wide whitespace-nowrap overflow-hidden text-ellipsis">
+        <h1 className="text-white font-slab font-extrabold uppercase leading-tight text-3xl md:text-5xl lg:text-6xl tracking-wide whitespace-nowrap overflow-hidden text-ellipsis">
           {HERO.title}
         </h1>
       </div>
