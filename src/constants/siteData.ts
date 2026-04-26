@@ -266,7 +266,7 @@ Hesperia, CA 92344`,
     highlight: true,
     fields: [
       { label: "Account Name", value: "Step2StepUp Inc." },
-      { label: "Zelle Phone Number", value: "760-220-6004", highlight: true },
+      { label: "Email ID", value: "vasu_b_pawar@yahoo.com", highlight: true },
       { label: "Required Memo", value: "Attn: Vasu Pawar: Awards Night 2026" },
     ],
   },
