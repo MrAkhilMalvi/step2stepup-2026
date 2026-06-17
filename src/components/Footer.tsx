@@ -5,30 +5,32 @@ import { FacebookIcon, TwitterIcon, YoutubeIcon } from "./icons/Icons";
 
 const icons = [FacebookIcon, TwitterIcon, YoutubeIcon];
 
+
+
 const Footer: React.FC = () => {
   const { nonprofit, ein, mission, contact, copyright } = FOOTER;
 
   return (
     <footer className="bg-[#08173E]">
-      <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-12 px-6 py-[40px] md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)] md:py-[50px]">
+      <div className="mx-auto grid max-w-full grid-cols-1 gap-12 px-6 py-[40px] md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] md:py-[50px]">
+        {/* Logo & Mission */}
         <div>
           <img
             src={IMAGES.logoDark}
             alt="Step2StepUp dark blue"
             className="mb-4 h-[96px]"
           />
-
           <p className="text-[15px] leading-[1.8] text-white">
             {nonprofit}
             <br />
             {ein}
           </p>
-
           <p className="mt-3 max-w-[420px] text-[15px] leading-[1.8] text-[#E3E3E3]">
             {mission}
           </p>
         </div>
 
+        {/* Navigation */}
         <div className="flex flex-col gap-6 md:pt-3">
           <ul className="space-y-3">
             {NAV_LINKS.map((link) => (
@@ -62,12 +64,54 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Legal */}
         <div className="space-y-5">
-          <h4 className="text-[18px] font-semibold text-[#FFE1A1]">
+          <h4 className="text-[18px] font-semibold text-[#FFE1A1] md:pt-3">
+            Legal
+          </h4>
+
+          <ul className="space-y-3">
+            {" "}
+            <li>
+              {" "}
+              <Link
+                href="/privacy"
+                className="inline-block rounded-sm px-2 py-1 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#49B4DE] hover:text-black"
+              >
+                {" "}
+                Privacy Policy{" "}
+              </Link>{" "}
+            </li>{" "}
+            <li>
+              {" "}
+              <Link
+                href="/terms"
+                className="inline-block rounded-sm px-2 py-1 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#49B4DE] hover:text-black"
+              >
+                {" "}
+                Terms & Conditions{" "}
+              </Link>{" "}
+            </li>{" "}
+            <li>
+              {" "}
+              <Link
+                href="/cookies"
+                className="inline-block rounded-sm px-2 py-1 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-[#49B4DE] hover:text-black"
+              >
+                {" "}
+                Cookie Policy{" "}
+              </Link>{" "}
+            </li>{" "}
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div className="space-y-5">
+          <h4 className="text-[18px] font-semibold text-[#FFE1A1] md:pt-3">
             Connect with us
           </h4>
 
-          <p className="text-[15px] leading-[1.9] text-[#E3E3E3]">
+          <p className="text-[15px] leading-[1.5] text-[#E3E3E3]">
             Tel.: {contact.tel}
             <br />
             Email: {contact.email}
@@ -91,7 +135,6 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
-
       <div className="bg-[#0188BF] py-3 text-center text-[12px] text-white">
         {copyright}
       </div>
