@@ -71,7 +71,7 @@ const Events: React.FC = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4 mt-4 w-full">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4 mt-4  w-full">
                 <EventButton
                   href="https://www.newindiaabroad.com/english/indian-diaspora-community/step2stepup-hosts-awards-night-in-ontario-ca"
                   label="READ MORE"
@@ -103,25 +103,32 @@ const Events: React.FC = () => {
           {/* =========================================
               NEW: SIDE-BY-SIDE IFRAMES CONTAINER
           ========================================= */}
-          <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-8 w-full max-w-[1140px] mx-auto">
-            {/* Left Frame: AnyFlip Interactive Booklet */}
-            <div className="w-full md:w-1/2 max-w-[550px] aspect-[550/350] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 overflow-hidden bg-white">
-              <iframe
-                className="w-full h-full"
-                src="http://online.anyflip.com/jykgc/umpk/"
-                seamless={true}
-                scrolling="no"
-                frameBorder="0"
-                allowTransparency={true}
-                allowFullScreen={true}
-              ></iframe>
+          <div className="mt-20 flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-8 w-full max-w-[1140px] mx-auto">
+            <div className="w-full md:w-1/2 max-w-[550px] relative">
+              <div className="absolute -top-10 left-0 w-full">
+                <h3 className="text-center text-xl md:text-2xl font-bold text-[#C8A04B]">
+                  Iconiq Global Magazine - 1st Edition
+                </h3>
+              </div>
+
+              <div className="aspect-[550/350] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 overflow-hidden bg-white">
+                <iframe
+                  className="w-full h-full"
+                  src="http://online.anyflip.com/jykgc/umpk/"
+                  seamless={true}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowTransparency={true}
+                  allowFullScreen={true}
+                />
+              </div>
             </div>
 
-            {/* Right Frame: YouTube Video Player */}
+            {/* Right Side: YouTube */}
             <div className="w-full md:w-1/2 max-w-[550px] aspect-[550/350] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 overflow-hidden bg-black">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/m2w048PSF5o?si=pvosN7qyit-1Jrg-"
+                src="https://www.youtube.com/embed/m2w048PSF5o?si=jruuZhoQAtxhE55B"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -197,7 +204,7 @@ const Events: React.FC = () => {
                 <div className="relative w-full aspect-video rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 overflow-hidden bg-black">
                   <iframe
                     className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/ZYIaXR4E_DI?si=C2ZCJW_vSDUo29kL"
+                    src="https://www.youtube.com/embed/ZYIaXR4E_DI?si=hvbo8OMn3LMuB5nw&start=497"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
