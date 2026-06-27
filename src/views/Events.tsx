@@ -3,14 +3,11 @@
 import React, { useState } from "react";
 import CtaBanner from "../components/CtaBanner";
 import { events, sectionTone } from "../constants/siteData";
-import { ArrowRightIcon } from "../components/icons/Icons";
 import { EventButton } from "../components/ui/EventButton";
 
 const Events: React.FC = () => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
-
 
   return (
     <main className="bg-white font-sans overflow-hidden relative">
@@ -24,7 +21,7 @@ const Events: React.FC = () => {
       </section>
 
       {/* =========================================
-          1. FEATURED EVENT: AWARDS NIGHT 2026 POSTER
+          1. FEATURED EVENT: ICONIQ GLOBAL AWARDS 2026
       ========================================= */}
       <section className="relative bg-white py-[50px] md:py-[80px]">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#C8A04B] rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
@@ -34,79 +31,103 @@ const Events: React.FC = () => {
             {/* Left Column */}
             <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left space-y-4 md:space-y-6">
               <div>
-                <span className="inline-block py-1 px-4 rounded-full bg-[#C8A04B]/10 text-[#C8A04B] text-[10px] md:text-sm font-bold tracking-widest uppercase mb-4 border border-[#C8A04B]/30">
-                  ★ Featured Upcoming Event ★
-                </span>
                 <h2 className="text-[14px] md:text-[16px] font-bold tracking-widest text-[#08173E] opacity-80 uppercase">
                   MAY 2026
                 </h2>
 
                 <h3 className="text-[clamp(1.75rem,3vw,2.45rem)] font-bold text-[#C8A04B] leading-tight mt-1">
-                  AWARDS NIGHT 2026
+                  ICONIQ GLOBAL AWARDS 2026
                 </h3>
 
-                <div className="text-[16px] md:text-[20px] leading-[1.8] md:leading-[1.9] mt-4 md:mt-5 text-[#555555]">
-                  A Night of Honor, Elegance & Celebrations highlighting
-                  successful & inspirational women. Join us for an unforgettable
-                  evening.
+                <div className="text-[15px] md:text-[16px] space-y-4 leading-[1.8] md:leading-[1.9] mt-4 md:mt-5 text-[#555555]">
+                  <p>
+                    Step2StepUp Inc. organized the Iconiq Global Awards 2026 and
+                    officially launched the ICONIQ GLOBAL Magazine, on May 17
+                    2026, as a celebration of excellence, empowerment,
+                    leadership, and cultural diversity. The event was hosted in
+                    Ontario, California and brought together distinguished
+                    dignitaries, influential leaders, entrepreneurs, artists,
+                    and community members.
+                  </p>
+                  <p>
+                    Chief Guest of Honor Dr. K. J. Srinivasa, accompanied by
+                    Ashwini Srinivasa, delivered keynote addresses focusing on
+                    leadership, humanity, service, and hope for future
+                    generations. Among notable attendees of the event was
+                    California State Treasurer, Fiona Ma. A key highlight of the
+                    event was the official launch of ICONIQ GLOBAL Magazine,
+                    dedicated to showcasing iconic voices, influential stories,
+                    and global changemakers.
+                  </p>
+                  <p>
+                    Bobbie Chance, who was featured on the magazine’s cover, was
+                    honored at the event. She also shared her experiences as a
+                    coach to top Hollywood stars, motivating others to pursue
+                    their dreams fearlessly. During the ceremony, 24 awardees
+                    were honored, with each award linked to a principle of life
+                    as represented by the Ashoka Chakra.
+                  </p>
                 </div>
               </div>
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4 mt-4 w-full">
-                <a
-                  href="https://givebutter.com/awards-night-2026-bsfcxz"
-                  className="bg-[#C8A04B] text-white font-bold text-[14px] md:text-lg px-5 md:px-6 py-3 md:py-4 rounded-xl shadow-[0_10px_20px_rgba(200,160,75,0.3)] hover:bg-[#08173E] hover:text-white hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 md:gap-3 w-fit"
-                >
-                  Book Your Seats Now
-                  <ArrowRightIcon />
-                </a>
-
-                {/* View Brochure Button (Triggers PDF Modal) */}
-                <button
-                  onClick={() => {
-                    setIsModalOpen(true);
-                  }}
-                  className="bg-transparent border-2 border-[#C8A04B] text-[#C8A04B] font-bold text-[14px] md:text-lg px-5 md:px-6 py-3 md:py-4 rounded-xl hover:bg-[#C8A04B] hover:text-white hover:shadow-[0_10px_20px_rgba(200,160,75,0.3)] hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 md:gap-3 w-fit"
-                >
-                  View Flyer
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    className="w-5 h-5 md:w-6 md:h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-                    />
-                  </svg>
-                </button>
+                <EventButton
+                  href="https://www.newindiaabroad.com/english/indian-diaspora-community/step2stepup-hosts-awards-night-in-ontario-ca"
+                  label="READ MORE"
+                  variant="link"
+                />
               </div>
             </div>
 
-            {/* Right Column: Image Hover Swap */}
-            <div
-              className="w-full flex justify-center lg:justify-end group cursor-pointer mt-8 lg:mt-0"
-              onClick={() => {
-                setIsModalOpen(true);
-              }}
-            >
-              <div className="relative w-full max-w-[320px] md:max-w-[480px] rounded-xl shadow-[0_30px_60px_rgba(0,0,0,0.2)] border border-[#C8A04B]/50 transform transition-transform duration-500 group-hover:scale-[1.02] overflow-hidden bg-white">
-                <img
-                  src="/images/Flyer-AWARDS NIGHT 2026 FLYER.jpg"
-                  alt="Awards Night 2026 Second Page"
-                  className="w-full h-auto object-contain transition-opacity duration-700 ease-in-out group-hover:opacity-0"
-                />
-                <img
-                  src="/images/PostCard_page.png"
-                  alt="Awards Night 2026 Official Poster"
-                  className="absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100"
-                />
+            {/* Right Column: Media Container */}
+            <div className="w-full flex flex-col items-center lg:items-end gap-6 mt-8 lg:mt-0">
+              {/* Single Static Image Block */}
+              <div
+                className="w-full flex justify-center lg:justify-end cursor-pointer"
+                onClick={() => {
+                  setIsModalOpen(true);
+                }}
+              >
+                <div className="w-full max-w-[320px] md:max-w-[440px] max-h-[600px] md:max-h-[640px] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/40 overflow-hidden bg-white flex items-center justify-center transform transition-transform duration-300 hover:scale-[1.01]">
+                  <img
+                    src="/images/events/iconiq_global_awards.jpg"
+                    alt="ICONIQ Global Awards 2026"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
+            </div>
+          </div>
+
+          {/* =========================================
+              NEW: SIDE-BY-SIDE IFRAMES CONTAINER
+          ========================================= */}
+          <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-8 w-full max-w-[1140px] mx-auto">
+            {/* Left Frame: AnyFlip Interactive Booklet */}
+            <div className="w-full md:w-1/2 max-w-[550px] aspect-[550/350] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 overflow-hidden bg-white">
+              <iframe
+                className="w-full h-full"
+                src="http://online.anyflip.com/jykgc/umpk/"
+                seamless={true}
+                scrolling="no"
+                frameBorder="0"
+                allowTransparency={true}
+                allowFullScreen={true}
+              ></iframe>
+            </div>
+
+            {/* Right Frame: YouTube Video Player */}
+            <div className="w-full md:w-1/2 max-w-[550px] aspect-[550/350] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 overflow-hidden bg-black">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/m2w048PSF5o?si=pvosN7qyit-1Jrg-"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
@@ -138,13 +159,15 @@ const Events: React.FC = () => {
         }
 
         const imageBlock = (
-          <div className={`w-full flex items-center justify-center ${event.imageLeft ? "lg:justify-start" : "lg:justify-end"}`}>
+          <div
+            className={`w-full flex flex-col gap-6 items-center justify-center ${event.imageLeft ? "lg:justify-start" : "lg:justify-end"}`}
+          >
             <div
-              className={`w-full max-w-[500px] lg:max-w-[660px] ${
+              className={`w-full max-w-[500px] lg:max-w-[440px] ${
                 extEvent.enableHover
                   ? "relative cursor-pointer transform transition-transform duration-500 hover:scale-[1.02] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] overflow-hidden"
                   : isGopioEvent
-                    ? "rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-[#C8A04B]/30 bg-white p-2"
+                    ? "rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 bg-white p-2"
                     : "rounded-xl"
               }`}
             >
@@ -167,6 +190,23 @@ const Events: React.FC = () => {
                 />
               )}
             </div>
+
+            {/* Embedded Iframe Player specifically for GOPIO International 2026 Section */}
+            {isGopioEvent && (
+              <div className="w-full max-w-[500px] lg:max-w-[440px]">
+                <div className="relative w-full aspect-video rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] border border-[#C8A04B]/30 overflow-hidden bg-black">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/ZYIaXR4E_DI?si=C2ZCJW_vSDUo29kL"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            )}
           </div>
         );
 
@@ -186,13 +226,14 @@ const Events: React.FC = () => {
               ))}
             </div>
 
-            {/* Actions & New View YouTube Button */}
+            {/* Actions Container */}
             <div className="mt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-3">
               {event.actions.map((action) => (
                 <EventButton key={action.href} {...action} />
               ))}
 
-              {extEvent.videoUrl && (
+              {/* Render global recording button ONLY if it isn't the GOPIO 2026 event */}
+              {extEvent.videoUrl && !isGopioEvent && (
                 <button
                   onClick={() => setActiveVideo(extEvent.videoUrl!)}
                   className="bg-transparent border-2 border-red-600 text-red-600 font-bold text-[13px] md:text-[15px] px-4 py-3 md:px-4 md:py-5 rounded-xl hover:bg-red-600 hover:text-white hover:shadow-[0_10px_20px_rgba(220,38,38,0.3)] hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 w-fit"
@@ -294,13 +335,12 @@ const Events: React.FC = () => {
       {activeVideo && (
         <div
           className="fixed inset-0 z-[200] flex items-center justify-center bg-[#08173E]/95 backdrop-blur-md p-4 transition-opacity duration-300 ease-out"
-          onClick={() => setActiveVideo(null)} 
+          onClick={() => setActiveVideo(null)}
         >
           <div
             className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden border border-white/20 flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()} 
+            onClick={(e) => e.stopPropagation()}
           >
-
             <button
               onClick={() => setActiveVideo(null)}
               className="absolute top-2 right-2 md:-top-12 md:right-0 text-white/80 hover:text-red-500 transition-colors duration-300 z-50 p-2 bg-black/60 md:bg-transparent rounded-full"
