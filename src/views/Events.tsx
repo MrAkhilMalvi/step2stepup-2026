@@ -15,7 +15,7 @@ const Events: React.FC = () => {
       <section className="bg-[#08173E] py-[30px] md:py-[40px] relative">
         <div className="mx-auto max-w-[1140px] px-4 md:px-6">
           <h1 className="text-center text-[clamp(1.8rem,4vw,3rem)] font-semibold text-white tracking-wide">
-            Events of Step2StepUp
+            Events By Step2StepUp
           </h1>
         </div>
       </section>
